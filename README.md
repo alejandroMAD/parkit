@@ -15,13 +15,12 @@ Features
 * The application creates a parking system as a shared resource for cars to park, providing 107 regular parking spots and 2 reduced mobility reserved spots.
 * Two different Semaphore objects regulate the acquiring and releasing of permits to park in the regular/reduced mobility parking spots.
 * The application generates an infinite time-paced flow of threads, each representing a car requesting a permit to use the parking lot.
-
-
+* The Car objects generated include attributes of a random license plate number in Spain's format, a random brand and car model picked from a resource file and the fact of being a reduced mobility car or not regulated by a probability.
 
 Credits
 -------------------
 
-* Parking photo background: [Juan Carlos I Park labyrinth in Madrid, Spain by Victor - Unsplash](https://unsplash.com)
+* Parking photo background: [Photo of a parking by Timothy Tan - Unsplash](https://unsplash.com/es/fotos/NvQjfWey2H8)
 
 License
 --------
