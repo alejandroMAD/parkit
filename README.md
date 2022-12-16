@@ -29,7 +29,7 @@ Credits
 
 License
 --------
-    Copyright (C) 2022  Alejandro M. González
+    Copyright (C) 2022  Mario Cézar, Pablo Hurtado González, Alejandro M. González, Antonio Oliver, Helmer Villegas
     
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
