@@ -17,7 +17,7 @@ Features
 * The application generates an infinite time-paced flow of threads, each representing a car requesting a permit to use the parking lot.
 * The Car objects generated include attributes of a random license plate number in Spain's format, a random brand and car model picked from a resource file and the attribute of being a reduced-mobility car or not regulated by a probability factor.
 * Requests to Semaphores take a timeout 'patience' argument and a boolean fair argument set to true.
-* A TimeGenerator provides distinct random times to be used by several timed events in the appñication, such as the CarGenerator pace, cars requests patience timeout and cars stay in the parking spot.
+* A TimeGenerator provides distinct random times to be used by several timed events in the application, such as the CarGenerator pace, cars requests patience timeout and cars stay in the parking spot.
 * A Graphical User Interface depicts the state of every parking spot at any given time and provides information of the parked vehicles.
 
 This project is the product of a team effort made by the following students of the Multiplatform Applications Development grade course: Mario Cézar, Pablo Hurtado González, Alejandro M. González, Antonio Oliver and Helmer Villegas.
