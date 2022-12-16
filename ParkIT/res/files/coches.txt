@@ -1,0 +1,115 @@
+Alfa Romeo Giulietta
+Alfa Romeo Stelvio
+Audi A3
+Audi A4
+Audi A7
+Audi Q2
+Audi TT
+BMW Serie 2
+BMW Serie 5
+BMW X3
+Chevrolet Corvette
+Chrysler Voyager
+Citroën Berlingo
+Citroën C3 Aircross
+Citroën C4 Picasso
+Citroën C5
+Dacia Sandero
+Dodge Challenger
+Ferrari 458 Spider
+Fiat Panda
+Fiat Punto
+Fiat Qubo
+Fiat Tipo
+Ford Fiesta
+Ford Focus
+Ford Kuga
+Ford Mondeo
+Ford Mustang
+Honda Accord
+Honda Civic
+Honda CR-V
+Honda Jazz
+Hummer H2
+Hyundai i30
+Hyundai Ioniq
+Hyundai Santa Fe
+Hyundai Tucson
+Iveco Daily
+Jaguar F-Pace
+Jaguar XE
+Jeep Cherokee
+Kia Niro
+Kia Picanto
+Kia Rio
+Kia Sorento
+Kia Sportage
+Lamborghini Aventador
+Lancia Delta
+Lancia Phedra
+Lancia Ypsilon
+Land Rover Defender
+Land Rover Range Rover
+Lexus NX
+Mazda CX-5
+Mazda CX-9
+Mazda MX-5
+Mercedes Benz Clase A
+Mercedes Benz Clase B
+Mercedes Benz Clase C
+Mercedes Benz GLC
+Mini Cooper
+Mitsubishi Eclipse
+Mitsubishi Outlander
+Nissan Juke
+Nissan Micra
+Nissan Qashqai
+Opel Astra
+Opel Corsa
+Opel Mokka
+Opel Zafira
+Peugeot 208
+Peugeot 308
+Peugeot 508
+Peugeot Rifter
+Porsche 911 Carrera
+Renault Captur
+Renault Clio
+Renault Espace
+Renault Grand Scénic
+Renault Megane
+Saab 93
+Seat Altea
+Seat Arona
+Seat Ibiza
+Seat León
+Seat Marbella
+Seat Tarraco
+Seat Toledo
+Skoda Fabia
+Skoda Kamiq
+Skoda Octavia
+Smart Fortwo
+SsangYong Korando
+Subaru Impreza
+Suzuki S-Cross
+Tesla Model 3
+Tesla Model S
+Tesla Model X
+Toyota Auris
+Toyota Aygo
+Toyota CHR
+Toyota Corolla
+Toyota Land Cruiser
+Toyota Prius
+Toyota Yaris
+Volkswagen Arteon
+Volkswagen Golf
+Volkswagen Passat
+Volkswagen Polo
+Volkswagen Sharan
+Volkswagen Tiguan
+Volkswagen Touareg
+Volvo V60
+Volvo V90
+Volvo XC60
