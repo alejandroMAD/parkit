@@ -20,16 +20,18 @@ Features
 * A TimeGenerator provides distinct random times to be used by several timed events in the application, such as the CarGenerator pace, cars requests patience timeout and cars stay in the parking spot.
 * A Graphical User Interface depicts the state of every parking spot at any given time and provides information of the parked vehicles.
 
-This project is the product of a team effort made by the following students of the Multiplatform Applications Development grade course: Mario Cézar, Pablo Hurtado González, Alejandro M. González, Antonio Oliver and Helmer Villegas.
+This project is the product of a team effort made by the following students in the Multiplatform Applications Development grade course: Mario Cézar, Pablo Hurtado González, Alejandro M. González, Antonio Oliver and Helmer Villegas.
 
 Credits
 -------------------
 
 * Parking photo background: [Photo of a parking by Timothy Tan - Unsplash](https://unsplash.com/es/fotos/NvQjfWey2H8)
+* Wheelchair icon: [Handicap icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/handicap)
 
 License
 --------
-    Copyright (C) 2022  Mario Cézar, Pablo Hurtado González, Alejandro M. González, Antonio Oliver, Helmer Villegas
+    Copyright (C) 2022  Mario Cézar, Pablo Hurtado González, Alejandro M. González, 
+    Antonio Oliver, Helmer Villegas
     
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
