@@ -26,6 +26,7 @@ Reconocimiento
 -------------------
 
 * Fotografía de parking de fondo: [Fotografía de un parking por Timothy Tan - Unsplash](https://unsplash.com/es/fotos/NvQjfWey2H8)
+* Icono de una silla de ruedas: [Iconos creados por Freepik - Flaticon](https://www.flaticon.com/free-icons/handicap)
 
 Licencia
 --------
