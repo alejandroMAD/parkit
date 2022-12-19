@@ -6,16 +6,13 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class GeneradorTiempo implements Runnable {
 
-	private int tiempoGeneracionCochesNuevo;
+	private int GeneracionCochesNuevo;
 
-	private int tiempoGeneracionCochesUsado;
+	private int GeneracionCochesUsado;
 
+	private int DuracionEstanciaCochesNuevo;
 
-
-	private int tiempoDuracionEstanciaCochesNuevo;
-
-	private int tiempoDuracionEstanciaCochesUsado;
-
+	private int DuracionEstanciaCochesUsado;
 
 	private int PacienciaCochesNormalesNuevo;
 
@@ -25,7 +22,79 @@ public class GeneradorTiempo implements Runnable {
 
 	private int PacienciaCochesMRUsado;
 
+
+	public int getGeneracionCochesNuevo() {
+		return GeneracionCochesNuevo;
+	}
+
+
+	public void setGeneracionCochesNuevo(int GeneracionCochesNuevo) {
+		this.GeneracionCochesNuevo = GeneracionCochesNuevo;
+	}
+
+	public int getGeneracionCochesUsado() {
+		return GeneracionCochesUsado;
+	}
+
+	public void setGeneracionCochesUsado(int GeneracionCochesUsado) {
+		this.GeneracionCochesUsado = GeneracionCochesUsado;
+	}
+
+	public int getDuracionEstanciaCochesNuevo() {
+		return DuracionEstanciaCochesNuevo;
+	}
+
+	public void setDuracionEstanciaCochesNuevo(int DuracionEstanciaCochesNuevo) {
+		this.DuracionEstanciaCochesNuevo = DuracionEstanciaCochesNuevo;
+	}
+
+	public int getDuracionEstanciaCochesUsado() {
+		return DuracionEstanciaCochesUsado;
+	}
+
+	public void setDuracionEstanciaCochesUsado(int DuracionEstanciaCochesUsado) {
+		this.DuracionEstanciaCochesUsado = DuracionEstanciaCochesUsado;
+	}
+
+	public int getPacienciaCochesNormalesNuevo() {
+		return PacienciaCochesNormalesNuevo;
+	}
+
+	public void setPacienciaCochesNormalesNuevo(int PacienciaCochesNormalesNuevo) {
+		this.PacienciaCochesNormalesNuevo = PacienciaCochesNormalesNuevo;
+	}
+
+	public int getPacienciaCochesNormalesUsado() {
+		return PacienciaCochesNormalesUsado;
+	}
+
+	public void setPacienciaCochesNormalesUsado(int PacienciaCochesNormalesUsado) {
+		this.PacienciaCochesNormalesUsado = PacienciaCochesNormalesUsado;
+	}
+
+	public int getPacienciaCochesMRNuevo() {
+		return PacienciaCochesMRNuevo;
+	}
+
+	public void setPacienciaCochesMRNuevo(int PacienciaCochesMRNuevo) {
+		this.PacienciaCochesMRNuevo = PacienciaCochesMRNuevo;
+	}
+
+	public int getPacienciaCochesMRUsado() {
+		return PacienciaCochesMRUsado;
+	}
+
+	public void setPacienciaCochesMRUsado(int PacienciaCochesMRUsado) {
+		this.PacienciaCochesMRUsado = PacienciaCochesMRUsado;
+	}
+
+
+
+
 	public GeneradorTiempo() {}
+
+
+
 
 	@Override
 	public void run() {
