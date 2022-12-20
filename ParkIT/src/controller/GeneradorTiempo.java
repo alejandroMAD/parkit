@@ -1,7 +1,5 @@
 package controller;
 
-import java.util.HashSet;
-import java.util.Objects;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class GeneradorTiempo implements Runnable {
@@ -22,11 +20,71 @@ public class GeneradorTiempo implements Runnable {
 
 	private int PacienciaCochesMRUsado;
 
+	public GeneradorTiempo() {
+		setGeneracionCochesNuevo(ThreadLocalRandom.current().nextInt(2, 8));
+		setDuracionEstanciaCochesNuevo(ThreadLocalRandom.current().nextInt(40, 60));
+		setPacienciaCochesNormalesNuevo(ThreadLocalRandom.current().nextInt(5));
+		setPacienciaCochesMRNuevo(ThreadLocalRandom.current().nextInt(2));
+	}
+
+	private void tiemposDesiguales() {
+		System.out.println(GeneracionCochesNuevo);
+		comprobarGeneracionCochesTiempo();
+		System.out.println(DuracionEstanciaCochesNuevo);
+		comprobarDuracionEstanciaPlaza();
+		System.out.println(PacienciaCochesMRNuevo);
+		comprobarPacienciaMR();
+		System.out.println(PacienciaCochesNormalesNuevo);
+		comprobarPacienciaNormal();
+	}
+
+	private void comprobarGeneracionCochesTiempo() {
+		int valorGeneradoGeneracionCoches = ThreadLocalRandom.current().nextInt(2, 8);
+		while (valorGeneradoGeneracionCoches == GeneracionCochesUsado) {
+			valorGeneradoGeneracionCoches = ThreadLocalRandom.current().nextInt(2, 8);
+		}
+		if (valorGeneradoGeneracionCoches != GeneracionCochesUsado) {
+			GeneracionCochesNuevo = valorGeneradoGeneracionCoches;
+		}
+		System.out.println(GeneracionCochesNuevo);
+	}
+
+	private void comprobarDuracionEstanciaPlaza() {
+		int valorGeneradoEstanciaPlaza = ThreadLocalRandom.current().nextInt(40, 60);
+		while (valorGeneradoEstanciaPlaza == DuracionEstanciaCochesUsado) {
+			valorGeneradoEstanciaPlaza = ThreadLocalRandom.current().nextInt(40, 60);
+		}
+		if (valorGeneradoEstanciaPlaza != DuracionEstanciaCochesUsado) {
+			DuracionEstanciaCochesNuevo = valorGeneradoEstanciaPlaza;
+		}
+		System.out.println(DuracionEstanciaCochesNuevo);
+	}
+
+	private void comprobarPacienciaNormal() {
+		int valorGeneradoPacienciaNormal = ThreadLocalRandom.current().nextInt(5);
+		while (valorGeneradoPacienciaNormal == PacienciaCochesNormalesUsado) {
+			valorGeneradoPacienciaNormal = ThreadLocalRandom.current().nextInt(5);
+		}
+		if (valorGeneradoPacienciaNormal != PacienciaCochesNormalesUsado) {
+			PacienciaCochesNormalesNuevo = valorGeneradoPacienciaNormal;
+		}
+		System.out.println(PacienciaCochesNormalesNuevo);
+	}
+
+	private void comprobarPacienciaMR() {
+		int valorGeneradoPacienciaMR = ThreadLocalRandom.current().nextInt(2);
+		while (valorGeneradoPacienciaMR == PacienciaCochesMRUsado) {
+			valorGeneradoPacienciaMR = ThreadLocalRandom.current().nextInt(2);
+		}
+		if (valorGeneradoPacienciaMR != PacienciaCochesMRUsado) {
+			PacienciaCochesMRNuevo = valorGeneradoPacienciaMR;
+		}
+		System.out.println(PacienciaCochesMRNuevo);
+	}
 
 	public int getGeneracionCochesNuevo() {
 		return GeneracionCochesNuevo;
 	}
-
 
 	public void setGeneracionCochesNuevo(int GeneracionCochesNuevo) {
 		this.GeneracionCochesNuevo = GeneracionCochesNuevo;
@@ -88,22 +146,13 @@ public class GeneradorTiempo implements Runnable {
 		this.PacienciaCochesMRUsado = PacienciaCochesMRUsado;
 	}
 
-
-
-
-	public GeneradorTiempo() {}
-
-
-
-
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
 		while (true) {
+			tiemposDesiguales();
 			try {
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}

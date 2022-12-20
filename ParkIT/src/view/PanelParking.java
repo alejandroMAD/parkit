@@ -8,9 +8,9 @@ import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 public class PanelParking extends JPanel {
-	
+
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	private Image backgroundImage;
@@ -20,19 +20,18 @@ public class PanelParking extends JPanel {
 
 	public PanelParking() {
 		this.backgroundImage = new ImageIcon(
-				getClass().getClassLoader().getResource("images/parking.jpg")
-		).getImage();
-		
+				getClass().getClassLoader().getResource("images/parking.jpg")).getImage();
+
 		setPreferredSize(new Dimension(940, 700));
 		setLayout(null);
-		
+
 		panelPAreaA = new PanelPAreaA();
 		panelPAreaB = new PanelPAreaB();
 		panelPAreaC = new PanelPAreaC();
 		add(panelPAreaA);
 		add(panelPAreaB);
 		add(panelPAreaC);
-				
+
 	}
 
 	public void paintComponent(Graphics g) {
@@ -40,10 +39,16 @@ public class PanelParking extends JPanel {
 		g.drawImage(backgroundImage, 0, 0, this);
 	}
 
-	public PanelPAreaA getPanelPAreaA() { return panelPAreaA; }
+	public PanelPAreaA getPanelPAreaA() {
+		return panelPAreaA;
+	}
 
-	public PanelPAreaB getPanelPAreaB() { return panelPAreaB; }
+	public PanelPAreaB getPanelPAreaB() {
+		return panelPAreaB;
+	}
 
-	public PanelPAreaC getPanelPAreaC() { return panelPAreaC; }
-	
+	public PanelPAreaC getPanelPAreaC() {
+		return panelPAreaC;
+	}
+
 }

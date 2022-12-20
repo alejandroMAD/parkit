@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 public class PanelPAreaC extends JPanel {
 
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1L;
 	private ArrayList<JButton> parkingCButtons;
@@ -19,7 +19,7 @@ public class PanelPAreaC extends JPanel {
 	private int[] xCoordinates;
 	private int[] xMRCoordinates;
 	private  Color verdeLibre, rojoOcupado;
-	
+
 	public PanelPAreaC() {
 		// Valores necesarios para ajustar botones a las ligeras desproporciones de la fotografía de fondo
 		this.xCoordinates = new int[] {
@@ -31,11 +31,11 @@ public class PanelPAreaC extends JPanel {
 		this.parkingCButtons = new ArrayList<JButton>();
 		this.verdeLibre = new Color(50, 205, 50);
 		this.rojoOcupado = new Color(255, 99, 71);
-		
+
 		setOpaque(false);
 		setBounds(10, 441, 873, 151);
 		setLayout(null);
-		
+
 		for (int i = 0; i < 22; i++) {
 			JButton button = new JButton();
 			button.setBounds(xCoordinates[i], 3, 30, 65);
@@ -45,7 +45,7 @@ public class PanelPAreaC extends JPanel {
 			parkingCButtons.add(button);
 			add(button);
 		}
-		
+
 		for (int i = 22; i < 41; i++) {
 			JButton button = new JButton();
 			button.setBounds(xCoordinates[i - 22], 82, 30, 65);
@@ -55,7 +55,7 @@ public class PanelPAreaC extends JPanel {
 			parkingCButtons.add(button);
 			add(button);
 		}
-		
+
 		for (int i = 0; i < 2; i++) {
 			JButton button = new JButton();
 			button.setBounds(xMRCoordinates[i], 82, 50, 65);
@@ -65,9 +65,9 @@ public class PanelPAreaC extends JPanel {
 			// TODO: button.addActionListener(controlador);
 			parkingCButtons.add(button);
 			add(button);
-		}			
+		}
 	}
-	
+
 	public JButton getBtnByName(String name) {
 		JButton matchedButton = null;
 		for (JButton btn : parkingCButtons) {

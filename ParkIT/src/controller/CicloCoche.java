@@ -1,9 +1,9 @@
 package controller;
 
 /**
- * Contiene la lógica inherente al método run() de un Coche-thread
- * con las llamadas a los métodos correspondientes del ControladorParking
- * separando este comportamiento de la mera definición del Modelo Coche.
+ * Contiene la lï¿½gica inherente al mï¿½todo run() de un Coche-thread
+ * con las llamadas a los mï¿½todos correspondientes del ControladorParking
+ * separando este comportamiento de la mera definiciï¿½n del Modelo Coche.
  *
  */
 public class CicloCoche {
