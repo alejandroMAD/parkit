@@ -15,14 +15,14 @@ import model.Parking;
 import view.Frame;
 
 /**
- * Muestra la información del vehículo alojado en una plaza
+ * Muestra la informaciï¿½n del vehï¿½culo alojado en una plaza
  *
  */
 public class ControladorInforme implements ActionListener {
-	
+
 	private Frame frame;
 	private Parking parking;
-	
+
 	public ControladorInforme(Frame frame, Parking parking) {
 		this.frame = frame;
 		this.parking = parking;
@@ -30,30 +30,27 @@ public class ControladorInforme implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
+
 		JButton botonPlaza = (JButton) e.getSource();
 		String plaza = botonPlaza.getName();
 		Coche coche = parking.getMapaPlazasCoches().get(plaza);
 
 		UIManager.put("OptionPane.messageFont", new FontUIResource(
-				new Font("Arial", Font.BOLD, 22))
-		);  
-		
+				new Font("Arial", Font.BOLD, 22)));
+
 		if (coche != null) {
 			JOptionPane.showMessageDialog(
-					frame, 
-					coche.toString(), 
-					"Información sobre el vehículo en la plaza "
-					+ coche.getPlaza(),
-					JOptionPane.INFORMATION_MESSAGE
-			);			
+					frame,
+					coche.toString(),
+					"Informaciï¿½n sobre el vehï¿½culo en la plaza "
+							+ coche.getPlaza(),
+					JOptionPane.INFORMATION_MESSAGE);
 		} else {
 			JOptionPane.showMessageDialog(
-					frame, 
-					"La plaza " + plaza + " está vacía", 
-					"Información sobre la plaza", 
-					JOptionPane.ERROR_MESSAGE
-			);
+					frame,
+					"La plaza " + plaza + " estï¿½ vacï¿½a",
+					"Informaciï¿½n sobre la plaza",
+					JOptionPane.ERROR_MESSAGE);
 		}
 	}
 }

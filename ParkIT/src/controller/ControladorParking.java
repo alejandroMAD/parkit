@@ -1,9 +1,9 @@
 package controller;
 
 /**
- * Contiene la lógica de semáforos y gobierno del tráfico de coches
- * en el Parking, separando la lógica de estos métodos de operación
- * de la mera definición del mapa o "blueprint" del Modelo Parking
+ * Contiene la lï¿½gica de semï¿½foros y gobierno del trï¿½fico de coches
+ * en el Parking, separando la lï¿½gica de estos mï¿½todos de operaciï¿½n
+ * de la mera definiciï¿½n del mapa o "blueprint" del Modelo Parking
  *
  */
 public class ControladorParking {

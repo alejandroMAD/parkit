@@ -1,137 +1,158 @@
 package controller;
 
-import java.util.HashSet;
-import java.util.Objects;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class GeneradorTiempo implements Runnable {
-	
-	private Double probabilidadesMinusvalia;
-	
-	private Integer tiempoGeneracionCoches;
-	
-	private Integer tiempoDuracionEstanciaCoches;
-	
-	private Integer PacienciaCochesNormales;
-	
-	private Integer PacienciaCochesMR;
-	
-	private HashSet<Integer> ColeccionTiempoGeneracionCoches = new HashSet<>();
-	
-	private HashSet<Integer> ColecciontiempoDuracionEstanciaCoches = new HashSet<>();
-	
-	private HashSet<Integer> ColeccionPacienciaCochesNormales = new HashSet<>();
-	
-	private HashSet<Integer> ColeccionPacienciaCochesMR = new HashSet<>();
-	
-	private HashSet<Double> ColeccionTiempoMinusvaliaCoches = new HashSet<>();
-	
+
+	private int GeneracionCochesNuevo;
+
+	private int GeneracionCochesUsado;
+
+	private int DuracionEstanciaCochesNuevo;
+
+	private int DuracionEstanciaCochesUsado;
+
+	private int PacienciaCochesNormalesNuevo;
+
+	private int PacienciaCochesNormalesUsado;
+
+	private int PacienciaCochesMRNuevo;
+
+	private int PacienciaCochesMRUsado;
+
 	public GeneradorTiempo() {
-		setProbabilidadesMinusvalia(ThreadLocalRandom.current().nextDouble());
-		setTiempoGeneracionCoches(ThreadLocalRandom.current().nextInt(2, 8));
-		setTiempoDuracionEstanciaCoches(ThreadLocalRandom.current().nextInt(40, 60));
-		setPacienciaCochesMR(ThreadLocalRandom.current().nextInt(5));
-		setPacienciaCochesNormales(ThreadLocalRandom.current().nextInt(2));
-	}
-	
-	private void ComprobarGeneracionCoches() {
-		if (!ColeccionTiempoGeneracionCoches.add(getTiempoGeneracionCoches())) {
-			ColeccionTiempoGeneracionCoches.remove(getTiempoGeneracionCoches());
-		}
-	}
-	private void ComprobarEstanciaCoches() {
-		if (!ColecciontiempoDuracionEstanciaCoches.add(getTiempoDuracionEstanciaCoches())) {
-			ColecciontiempoDuracionEstanciaCoches.remove(getTiempoDuracionEstanciaCoches());
-		}
-	}
-	
-	private void ComprobarPacienciaCochesNormales() {
-		if (!ColeccionPacienciaCochesNormales.add(getPacienciaCochesNormales())) {
-			ColeccionPacienciaCochesNormales.remove(getPacienciaCochesNormales());
-		}
-	}
-	
-	private void ComprobarPacienciaCochesNormalesMR() {
-		if (!ColeccionPacienciaCochesMR.add(getPacienciaCochesMR())) {
-			ColeccionPacienciaCochesMR.remove(getPacienciaCochesMR());
-		}
-	}
-	
-	private void ComprobarMinusvaliaCoches() {
-		if (!ColeccionTiempoMinusvaliaCoches.add(getProbabilidadesMinusvalia())) {
-			ColeccionTiempoMinusvaliaCoches.remove(getProbabilidadesMinusvalia());
-		}
+		setGeneracionCochesNuevo(ThreadLocalRandom.current().nextInt(2, 8));
+		setDuracionEstanciaCochesNuevo(ThreadLocalRandom.current().nextInt(40, 60));
+		setPacienciaCochesNormalesNuevo(ThreadLocalRandom.current().nextInt(5));
+		setPacienciaCochesMRNuevo(ThreadLocalRandom.current().nextInt(2));
 	}
 
-	public Double getProbabilidadesMinusvalia() {
-		return probabilidadesMinusvalia;
+	private void tiemposDesiguales() {
+		System.out.println(GeneracionCochesNuevo);
+		comprobarGeneracionCochesTiempo();
+		System.out.println(DuracionEstanciaCochesNuevo);
+		comprobarDuracionEstanciaPlaza();
+		System.out.println(PacienciaCochesMRNuevo);
+		comprobarPacienciaMR();
+		System.out.println(PacienciaCochesNormalesNuevo);
+		comprobarPacienciaNormal();
 	}
-	public void setProbabilidadesMinusvalia(Double probabilidadesMinusvalia) {
-		this.probabilidadesMinusvalia = probabilidadesMinusvalia;
+
+	private void comprobarGeneracionCochesTiempo() {
+		int valorGeneradoGeneracionCoches = ThreadLocalRandom.current().nextInt(2, 8);
+		while (valorGeneradoGeneracionCoches == GeneracionCochesUsado) {
+			valorGeneradoGeneracionCoches = ThreadLocalRandom.current().nextInt(2, 8);
+		}
+		if (valorGeneradoGeneracionCoches != GeneracionCochesUsado) {
+			GeneracionCochesNuevo = valorGeneradoGeneracionCoches;
+		}
+		System.out.println(GeneracionCochesNuevo);
 	}
-	public Integer getTiempoGeneracionCoches() {
-		return tiempoGeneracionCoches;
+
+	private void comprobarDuracionEstanciaPlaza() {
+		int valorGeneradoEstanciaPlaza = ThreadLocalRandom.current().nextInt(40, 60);
+		while (valorGeneradoEstanciaPlaza == DuracionEstanciaCochesUsado) {
+			valorGeneradoEstanciaPlaza = ThreadLocalRandom.current().nextInt(40, 60);
+		}
+		if (valorGeneradoEstanciaPlaza != DuracionEstanciaCochesUsado) {
+			DuracionEstanciaCochesNuevo = valorGeneradoEstanciaPlaza;
+		}
+		System.out.println(DuracionEstanciaCochesNuevo);
 	}
-	public void setTiempoGeneracionCoches(Integer tiempoGeneracionCoches) {
-		this.tiempoGeneracionCoches = tiempoGeneracionCoches;
+
+	private void comprobarPacienciaNormal() {
+		int valorGeneradoPacienciaNormal = ThreadLocalRandom.current().nextInt(5);
+		while (valorGeneradoPacienciaNormal == PacienciaCochesNormalesUsado) {
+			valorGeneradoPacienciaNormal = ThreadLocalRandom.current().nextInt(5);
+		}
+		if (valorGeneradoPacienciaNormal != PacienciaCochesNormalesUsado) {
+			PacienciaCochesNormalesNuevo = valorGeneradoPacienciaNormal;
+		}
+		System.out.println(PacienciaCochesNormalesNuevo);
 	}
-	public Integer getTiempoDuracionEstanciaCoches() {
-		return tiempoDuracionEstanciaCoches;
+
+	private void comprobarPacienciaMR() {
+		int valorGeneradoPacienciaMR = ThreadLocalRandom.current().nextInt(2);
+		while (valorGeneradoPacienciaMR == PacienciaCochesMRUsado) {
+			valorGeneradoPacienciaMR = ThreadLocalRandom.current().nextInt(2);
+		}
+		if (valorGeneradoPacienciaMR != PacienciaCochesMRUsado) {
+			PacienciaCochesMRNuevo = valorGeneradoPacienciaMR;
+		}
+		System.out.println(PacienciaCochesMRNuevo);
 	}
-	public void setTiempoDuracionEstanciaCoches(Integer tiempoDuracionEstanciaCoches) {
-		this.tiempoDuracionEstanciaCoches = tiempoDuracionEstanciaCoches;
+
+	public int getGeneracionCochesNuevo() {
+		return GeneracionCochesNuevo;
 	}
-	public Integer getPacienciaCochesNormales() {
-		return PacienciaCochesNormales;
+
+	public void setGeneracionCochesNuevo(int GeneracionCochesNuevo) {
+		this.GeneracionCochesNuevo = GeneracionCochesNuevo;
 	}
-	public void setPacienciaCochesNormales(Integer pacienciaCochesNormales) {
-		PacienciaCochesNormales = pacienciaCochesNormales;
+
+	public int getGeneracionCochesUsado() {
+		return GeneracionCochesUsado;
 	}
-	public Integer getPacienciaCochesMR() {
-		return PacienciaCochesMR;
+
+	public void setGeneracionCochesUsado(int GeneracionCochesUsado) {
+		this.GeneracionCochesUsado = GeneracionCochesUsado;
 	}
-	public void setPacienciaCochesMR(Integer pacienciaCochesMR) {
-		PacienciaCochesMR = pacienciaCochesMR;
+
+	public int getDuracionEstanciaCochesNuevo() {
+		return DuracionEstanciaCochesNuevo;
 	}
-	
-	@Override
-	public int hashCode() {
-		return Objects.hash(PacienciaCochesMR, PacienciaCochesNormales, probabilidadesMinusvalia,
-				tiempoDuracionEstanciaCoches, tiempoGeneracionCoches);
+
+	public void setDuracionEstanciaCochesNuevo(int DuracionEstanciaCochesNuevo) {
+		this.DuracionEstanciaCochesNuevo = DuracionEstanciaCochesNuevo;
 	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		GeneradorTiempo other = (GeneradorTiempo) obj;
-		return Objects.equals(PacienciaCochesMR, other.PacienciaCochesMR)
-				&& Objects.equals(PacienciaCochesNormales, other.PacienciaCochesNormales)
-				&& Objects.equals(probabilidadesMinusvalia, other.probabilidadesMinusvalia)
-				&& Objects.equals(tiempoDuracionEstanciaCoches, other.tiempoDuracionEstanciaCoches)
-				&& Objects.equals(tiempoGeneracionCoches, other.tiempoGeneracionCoches);
+
+	public int getDuracionEstanciaCochesUsado() {
+		return DuracionEstanciaCochesUsado;
 	}
+
+	public void setDuracionEstanciaCochesUsado(int DuracionEstanciaCochesUsado) {
+		this.DuracionEstanciaCochesUsado = DuracionEstanciaCochesUsado;
+	}
+
+	public int getPacienciaCochesNormalesNuevo() {
+		return PacienciaCochesNormalesNuevo;
+	}
+
+	public void setPacienciaCochesNormalesNuevo(int PacienciaCochesNormalesNuevo) {
+		this.PacienciaCochesNormalesNuevo = PacienciaCochesNormalesNuevo;
+	}
+
+	public int getPacienciaCochesNormalesUsado() {
+		return PacienciaCochesNormalesUsado;
+	}
+
+	public void setPacienciaCochesNormalesUsado(int PacienciaCochesNormalesUsado) {
+		this.PacienciaCochesNormalesUsado = PacienciaCochesNormalesUsado;
+	}
+
+	public int getPacienciaCochesMRNuevo() {
+		return PacienciaCochesMRNuevo;
+	}
+
+	public void setPacienciaCochesMRNuevo(int PacienciaCochesMRNuevo) {
+		this.PacienciaCochesMRNuevo = PacienciaCochesMRNuevo;
+	}
+
+	public int getPacienciaCochesMRUsado() {
+		return PacienciaCochesMRUsado;
+	}
+
+	public void setPacienciaCochesMRUsado(int PacienciaCochesMRUsado) {
+		this.PacienciaCochesMRUsado = PacienciaCochesMRUsado;
+	}
+
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
 		while (true) {
-			setProbabilidadesMinusvalia(ThreadLocalRandom.current().nextDouble());
-			ComprobarMinusvaliaCoches();
-			setTiempoGeneracionCoches(ThreadLocalRandom.current().nextInt(2, 5));
-			ComprobarGeneracionCoches();
-			setTiempoDuracionEstanciaCoches(ThreadLocalRandom.current().nextInt(40, 60));
-			ComprobarEstanciaCoches();
-			setPacienciaCochesMR(ThreadLocalRandom.current().nextInt(5));
-			ComprobarPacienciaCochesNormalesMR();
-			setPacienciaCochesNormales(ThreadLocalRandom.current().nextInt(2));
-			ComprobarPacienciaCochesNormales();
+			tiemposDesiguales();
 			try {
 				Thread.sleep(100);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}

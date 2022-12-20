@@ -6,9 +6,9 @@ import java.awt.event.ActionListener;
 import view.Frame;
 
 public class ControladorAfluencia implements ActionListener {
-	
+
 	private Frame frame;
-	
+
 	public ControladorAfluencia(Frame frame) {
 		this.frame = frame;
 	}
@@ -16,12 +16,11 @@ public class ControladorAfluencia implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource().equals(frame.getPanelTop().getBtnAfluenciaBaja())) {
-			// Lógica de AFLUENCIA BAJA
+			// Lï¿½gica de AFLUENCIA BAJA
 		} else if (e.getSource().equals(frame.getPanelTop().getBtnAfluenciaMedia())) {
-			// Lógica de AFLUENCIA MEDIA
+			// Lï¿½gica de AFLUENCIA MEDIA
 		} else if (e.getSource().equals(frame.getPanelTop().getBtnAfluenciaAlta())) {
-			// Lógica de AFLUENCIA ALTA
+			// Lï¿½gica de AFLUENCIA ALTA
 		}
 	}
 }
-
